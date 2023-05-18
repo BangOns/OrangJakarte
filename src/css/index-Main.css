@@ -1,0 +1,399 @@
+:root {
+  --warna-dasar1: red;
+  --warna-dasar2: #ff4646;
+  --warna-dasar3: #ff8585;
+  --warna-dasar4: #ffb396;
+  --warna-dasar5: #fff5c0;
+  --warna-dasar6: #ff1818;
+  --Font-dasar: "Poppins";
+}
+#content {
+  width: 100%;
+  margin-bottom: 20%;
+}
+.content-artikel {
+  width: 100%;
+  margin-bottom: 10%;
+}
+.content-budaya,
+.content-makanan {
+  width: 100%;
+  margin-bottom: 15%;
+}
+.content-wisata {
+  width: 100%;
+}
+.header-3,
+.header-4,
+.header-5,
+.header-6 {
+  width: 100%;
+  position: relative;
+}
+.Tentang-Jakarta,
+.Tentang-Budaya,
+.Tentang-Makanan,
+.Tentang-Wisata {
+  width: 100%;
+}
+.Tentang-Jakarta-Judul,
+.Tentang-Budaya-Judul,
+.Tentang-Makanan-Judul,
+.Tentang-Wisata-Judul {
+  width: 100%;
+  display: none;
+  transform: scale(0);
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+  animation-name: animationCome;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+.Tentang-Jakarta-Judul > h1,
+.Tentang-Budaya-Judul > h1,
+.Tentang-Makanan-Judul > h1,
+.Tentang-Wisata-Judul > h1 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: var(--warna-dasar2);
+  position: relative;
+  letter-spacing: 0.2em;
+}
+.Tentang-Jakarta-Judul > h1::before,
+.Tentang-Budaya-Judul > h1::before,
+.Tentang-Makanan-Judul > h1::before,
+.Tentang-Wisata-Judul > h1::before {
+  content: "";
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  top: 25px;
+  left: 20%;
+  background-color: var(--warna-dasar2);
+}
+.Tentang-Jakarta-Judul > h1::after,
+.Tentang-Budaya-Judul > h1::after,
+.Tentang-Makanan-Judul > h1::after,
+.Tentang-Wisata-Judul > h1::after {
+  content: "";
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  top: 25px;
+  right: 20%;
+  background-color: var(--warna-dasar2);
+}
+/* Artikel */
+.Tentang-Jakarta-text1,
+.Tentang-Jakarta-text2 {
+  display: flex;
+  width: 100%;
+  padding: 20px 0 0 40px;
+  gap: 10px;
+}
+.Tentang-Jakarta-text2 {
+  flex-direction: row-reverse;
+}
+.Teks-1,
+.Teks-2 {
+  width: 50%;
+}
+.Teks-1 > p,
+.Teks-2 > p {
+  font-size: 18px;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(170, 0, 0);
+  display: none;
+  transform: scale(0);
+
+  animation-name: animationCome;
+  animation-delay: 0.5s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+.Teks-2 > p {
+  text-align: end;
+  padding-right: 40px;
+}
+.Tentang-Jakarta-image1,
+.Tentang-Jakarta-image2 {
+  width: 50%;
+  height: 600px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 50px 40px 0 0;
+}
+
+.Tentang-Jakarta-image1 > img,
+.Tentang-Jakarta-image2 > img {
+  width: 600px;
+  height: 300px;
+  transform: scale(0);
+  display: none;
+  border-radius: 10px;
+  box-shadow: 15px 20px 20px 3px rgba(131, 131, 131, 0.9);
+  animation-name: animationCome;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+/* Budaya, Makanan , Wisata */
+
+.Container-Figure-Budaya,
+.Container-Figure-Makanan,
+.Container-Figure-Wisata {
+  width: 100%;
+  padding: 20px 2px 0 2px;
+  /* display: flex; */
+  display: none;
+  transform: scale(0);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  animation-name: animationCome;
+  animation-delay: 0.5s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+.section-figure-Budaya,
+.section-figure-Makanan,
+.section-figure-Wisata {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 40px;
+  transform: scale(0);
+  animation-name: animationCome;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.section-figure-Makanan:nth-child(odd) {
+  animation-name: animationCome;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+.section-figure-Wisata:nth-child(even) {
+  animation-name: animationCome;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+.image-budaya,
+.image-Makanan,
+.image-Wisata {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 9px 5px 15px rgba(218, 161, 161, 0.9);
+  transition: all 0.3s ease-in;
+  background-color: white;
+}
+.image-budaya:hover,
+.image-Makanan:hover,
+.image-Wisata:hover {
+  transform: scale(1.05);
+}
+.image-budaya > img,
+.image-Makanan > img,
+.image-Wisata > img {
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+}
+.text-image-budaya,
+.text-image-Makanan,
+.text-image-Wisata {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Poppins";
+  padding: 10px 0 10px 0;
+  color: var(--warna-dasar2);
+}
+
+@media screen and (max-width: 1245px) {
+  .Tentang-Jakarta-Judul > h1::before,
+  .Tentang-Budaya-Judul > h1::before,
+  .Tentang-Makanan-Judul > h1::before,
+  .Tentang-Wisata-Judul > h1::before {
+    left: 10%;
+  }
+  .Tentang-Jakarta-Judul > h1::after,
+  .Tentang-Budaya-Judul > h1::after,
+  .Tentang-Makanan-Judul > h1::after,
+  .Tentang-Wisata-Judul > h1::after {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .Tentang-Jakarta-Judul > h1::before,
+  .Tentang-Budaya-Judul > h1::before,
+  .Tentang-Makanan-Judul > h1::before,
+  .Tentang-Wisata-Judul > h1::before {
+    left: 7%;
+  }
+  .Tentang-Jakarta-Judul > h1::after,
+  .Tentang-Budaya-Judul > h1::after,
+  .Tentang-Makanan-Judul > h1::after,
+  .Tentang-Wisata-Judul > h1::after {
+    right: 7%;
+  }
+  .Tentang-Jakarta-image1 > img,
+  .Tentang-Jakarta-image2 > img {
+    width: 500px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .Tentang-Jakarta-Judul > h1::before,
+  .Tentang-Budaya-Judul > h1::before,
+  .Tentang-Makanan-Judul > h1::before,
+  .Tentang-Wisata-Judul > h1::before {
+    display: none;
+  }
+  .Tentang-Jakarta-Judul > h1::after,
+  .Tentang-Budaya-Judul > h1::after,
+  .Tentang-Makanan-Judul > h1::after,
+  .Tentang-Wisata-Judul > h1::after {
+    display: none;
+  }
+  .section-figure-Budaya,
+  .section-figure-Makanan,
+  .section-figure-Wisata {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 35px;
+  }
+
+  .Tentang-Jakarta-Judul,
+  .Tentang-Budaya-Judul,
+  .Tentang-Makanan-Judul,
+  .Tentang-Wisata-Judul {
+    text-align: start;
+    padding-left: 40px;
+    margin-bottom: 30px;
+  }
+  .Tentang-Jakarta-text1,
+  .Tentang-Jakarta-text2 {
+    display: block;
+    width: 100%;
+  }
+  .Teks-1,
+  .Teks-2 {
+    width: 90%;
+  }
+  .Teks-2 > p {
+    text-align: start;
+    padding-right: 0;
+  }
+  .Teks-1 > p,
+  .Teks-2 > p {
+    font-size: 17px;
+  }
+  .Tentang-Jakarta-image1,
+  .Tentang-Jakarta-image2 {
+    padding: 60px 40px 0 0;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: flex-start;
+    justify-content: end;
+  }
+}
+@media screen and (max-width: 690px) {
+  .Tentang-Jakarta-image1 > img,
+  .Tentang-Jakarta-image2 > img {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .Tentang-Jakarta-Judul > h1,
+  .Tentang-Budaya-Judul > h1,
+  .Tentang-Makanan-Judul > h1,
+  .Tentang-Wisata-Judul > h1 {
+    font-size: 1.5em;
+  }
+  .Teks-1 > p,
+  .Teks-2 > p {
+    font-size: 15px;
+  }
+  .Tentang-Jakarta-image1 > img,
+  .Tentang-Jakarta-image2 > img {
+    width: 350px;
+    height: 180px;
+  }
+  .Tentang-Jakarta-image1,
+  .Tentang-Jakarta-image2 {
+    padding: 40px 40px 0 0;
+    height: 270px;
+  }
+  .text-image-budaya,
+  .text-image-Makanan,
+  .text-image-Wisata {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .Tentang-Jakarta-Judul,
+  .Tentang-Budaya-Judul,
+  .Tentang-Makanan-Judul,
+  .Tentang-Wisata-Judul {
+    margin-bottom: 0px;
+    padding-left: 20px;
+  }
+  .Tentang-Jakarta-image1,
+  .Tentang-Jakarta-image2 {
+    padding: 20px 10px 0 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .Tentang-Jakarta-text1,
+  .Tentang-Jakarta-text2 {
+    padding: 10px 0 20px 15px;
+  }
+  .Tentang-Jakarta-Judul > h1,
+  .Tentang-Budaya-Judul > h1,
+  .Tentang-Makanan-Judul > h1,
+  .Tentang-Wisata-Judul > h1 {
+    font-size: 1em;
+  }
+  .Teks-1,
+  .Teks-2 {
+    width: 90%;
+  }
+  .Teks-1 > p,
+  .Teks-2 > p {
+    font-size: 13px;
+  }
+  .Tentang-Jakarta-image1,
+  .Tentang-Jakarta-image2 {
+    height: 220px;
+    padding: 30px 10px 0 0;
+  }
+  .Tentang-Jakarta-image1 > img,
+  .Tentang-Jakarta-image2 > img {
+    width: 250px;
+    height: 170px;
+  }
+}
+@keyframes animationCome {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

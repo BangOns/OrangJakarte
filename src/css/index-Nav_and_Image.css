@@ -1,0 +1,624 @@
+:root {
+  --warna-dasar1: red;
+  --warna-dasar2: #ff4646;
+  --warna-dasar3: #ff8585;
+  --warna-dasar4: #ffb396;
+  --warna-dasar5: #fff5c0;
+  --warna-dasar6: #ff1818;
+  --Font-dasar: "Poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+
+  background-color: rgba(255, 245, 192, 0.5);
+}
+/* Header 1 */
+.header-1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5px 5px 20px;
+  box-shadow: 0px -5px 10px 6px rgba(235, 27, 27, 0.6);
+  position: fixed;
+  z-index: 9;
+  background-color: rgb(255, 245, 192);
+}
+.header-sub-judul-web {
+  width: 50%;
+}
+.header-sub-judul-web > h1 {
+  color: var(--warna-dasar1);
+  font-style: italic;
+  font-weight: 700;
+}
+.header-sub-judul-web > h1:hover {
+  cursor: pointer;
+}
+.header-nav-list {
+  width: 50%;
+}
+.ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+li > a {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(100, 0, 0);
+  letter-spacing: 0.1px;
+}
+a {
+  text-decoration: none;
+}
+li > a:hover {
+  cursor: pointer;
+}
+#thisKontak {
+  background-color: rgb(255, 17, 0);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.header-nav-list-mobile {
+  width: 100%;
+  display: none;
+  justify-content: flex-end;
+  align-self: center;
+  padding-right: 10px;
+}
+.burgerNav {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.burgerNav:hover {
+  cursor: pointer;
+}
+.burgerNav > span:nth-child(1) {
+  width: 100%;
+  background-color: var(--warna-dasar1);
+  height: 3px;
+  box-shadow: 0px 0px 2px white;
+}
+.burgerNav > span:nth-child(2) {
+  width: 70%;
+  background-color: var(--warna-dasar1);
+  height: 3px;
+  box-shadow: 0px 0px 2px white;
+}
+.burgerNav > span:nth-child(3) {
+  width: 40%;
+  background-color: var(--warna-dasar1);
+  height: 3px;
+  box-shadow: 0px 0px 2px white;
+}
+.burgerNav-list {
+  width: 100%;
+  transform: translateY(-500px);
+  position: fixed;
+  background-color: rgb(247, 82, 53);
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.burgerNav-list > ul {
+  width: 100%;
+  height: 100%;
+}
+.burgerNav-list > ul > li {
+  padding: 10px;
+  width: 120px;
+}
+.burgerNav-list > ul > li > a {
+  color: white;
+}
+.active-BurgerNav-list {
+  transform: translateY(0px);
+}
+
+/* header-2 */
+#content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 100px;
+}
+.content-image {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  padding: 0 20px 0 20px;
+}
+.header-2 {
+  width: 100%;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.35fr 0.99fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr;
+  gap: 10px;
+  grid-template-areas:
+    "article article article budaya"
+    "article article article wisata"
+    "article article article makanan";
+}
+.image-icon-jakarta {
+  grid-area: article;
+  position: relative;
+  display: block;
+}
+.image-icon-budaya {
+  grid-area: budaya;
+  position: relative;
+  display: block;
+}
+.image-icon-wisata {
+  grid-area: wisata;
+  position: relative;
+  display: block;
+}
+.image-icon-makanan {
+  grid-area: makanan;
+  position: relative;
+  display: block;
+}
+/*  */
+.tagImage-Jakarta {
+  width: 100%;
+  height: 100%;
+}
+.tagImage-Jakarta > img {
+  width: 98.5%;
+  height: 80%;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.tagImage-Jakarta > img:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.text-singkat-jakarta {
+  width: 35%;
+  position: absolute;
+  top: 50px;
+  padding: 20px;
+}
+.judul-teks-singkat-jakarta {
+  width: 390px;
+}
+.judul-teks-singkat-jakarta > h1 {
+  font-size: 40px;
+  color: white;
+  font-family: var(--Font-dasar);
+  font-weight: 700;
+  text-shadow: 0px 0px 3px black;
+}
+.pesan-teks-singkat-jakarta {
+  width: 480px;
+}
+.pesan-teks-singkat-jakarta > p {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0px 0px 3px black;
+}
+/*  */
+.tagImage-budaya {
+  width: 100%;
+  height: 100%;
+}
+.tagImage-budaya > img {
+  width: 95%;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.tagImage-budaya > img:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.text-singkat-budaya {
+  width: 65%;
+  position: absolute;
+  bottom: 5px;
+  padding: 10px;
+}
+.judul-teks-singkat-budaya {
+  font-size: 20px;
+  color: white;
+  font-family: var(--Font-dasar);
+  font-weight: 700;
+}
+.pesan-teks-singkat-budaya > p {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+/*  */
+.tagImage-wisata {
+  width: 100%;
+  height: 100%;
+}
+.tagImage-wisata > img {
+  width: 95%;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.tagImage-wisata > img:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.text-singkat-wisata {
+  width: 65%;
+  position: absolute;
+  bottom: 5px;
+  padding: 10px;
+}
+.judul-teks-singkat-wisata {
+  font-size: 20px;
+  color: white;
+  font-family: var(--Font-dasar);
+  font-weight: 700;
+}
+.pesan-teks-singkat-wisata > p {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+/*  */
+.tagImage-makanan {
+  width: 100%;
+  height: 100%;
+  padding-right: 20px;
+}
+.tagImage-makanan > img {
+  height: 55%;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.tagImage-makanan > img:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+.text-singkat-makanan {
+  width: 75%;
+  position: absolute;
+  top: 140px;
+  padding: 10px;
+}
+.judul-teks-singkat-makanan {
+  font-size: 20px;
+  color: white;
+  font-family: var(--Font-dasar);
+  font-weight: 700;
+}
+.judul-teks-singkat-makanan > h1 {
+  text-shadow: 0px 0px 1px black;
+}
+.pesan-teks-singkat-makanan > p {
+  text-shadow: 0px 0px 2px black;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.buttonPrev {
+  position: absolute;
+  display: none;
+  width: 30px;
+  top: 200px;
+}
+.buttonNext {
+  position: absolute;
+  display: none;
+  width: 30px;
+  top: 200px;
+  right: 20px;
+}
+.buttonNext > img {
+  transform: rotate(180deg);
+}
+.buttonNext > img:hover {
+  cursor: pointer;
+}
+.buttonPrev > img:hover {
+  cursor: pointer;
+}
+.Active-image-Left {
+  animation-name: animationSlidersLeft;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.Active-image-Right {
+  animation-name: animationSlidersRight;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1200px) {
+  .judul-teks-singkat-jakarta > h1,
+  .judul-teks-singkat-budaya > h1,
+  .judul-teks-singkat-wisata > h1,
+  .judul-teks-singkat-makanan > h1 {
+    font-size: 20px;
+  }
+  .pesan-teks-singkat-jakarta > p,
+  .pesan-teks-singkat-budaya > p,
+  .pesan-teks-singkat-wisata > p,
+  .pesan-teks-singkat-makanan > p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .content-image {
+    top: 0px;
+    height: 500px;
+    padding: 0;
+  }
+  .header-2 {
+    height: auto;
+    display: block;
+  }
+  .image-icon-jakarta,
+  .image-icon-budaya,
+  .image-icon-wisata,
+  .image-icon-makanan {
+    position: absolute;
+    width: 100%;
+  }
+
+  .image-icon-budaya,
+  .image-icon-wisata,
+  .image-icon-makanan {
+    display: none;
+  }
+  .tagImage-Jakarta,
+  .tagImage-budaya,
+  .tagImage-wisata,
+  .tagImage-makanan {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tagImage-Jakarta > img,
+  .tagImage-budaya > img,
+  .tagImage-wisata > img,
+  .tagImage-makanan > img {
+    width: 650px;
+    height: 350px;
+    border-radius: 20px;
+  }
+  .tagImage-Jakarta > img:hover,
+  .tagImage-budaya > img:hover,
+  .tagImage-wisata > img:hover,
+  .tagImage-makanan > img:hover {
+    cursor: default;
+    transform: scale(1);
+  }
+  .text-singkat-budaya,
+  .text-singkat-wisata {
+    width: 100%;
+    position: absolute;
+    top: -420px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .text-singkat-jakarta,
+  .text-singkat-makanan {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .judul-teks-singkat-jakarta,
+  .judul-teks-singkat-budaya,
+  .judul-teks-singkat-wisata,
+  .judul-teks-singkat-makanan {
+    width: 100%;
+    text-align: center;
+  }
+  .judul-teks-singkat-jakarta > h1,
+  .judul-teks-singkat-budaya > h1,
+  .judul-teks-singkat-wisata > h1,
+  .judul-teks-singkat-makanan > h1 {
+    text-align: center;
+    font-weight: 500;
+    color: var(--warna-dasar2);
+    text-shadow: none;
+  }
+  .pesan-teks-singkat-jakarta,
+  .pesan-teks-singkat-budaya,
+  .pesan-teks-singkat-wisata,
+  .pesan-teks-singkat-makanan {
+    width: 100%;
+    text-align: center;
+  }
+  .pesan-teks-singkat-jakarta > p,
+  .pesan-teks-singkat-budaya > p,
+  .pesan-teks-singkat-wisata > p,
+  .pesan-teks-singkat-makanan > p {
+    text-align: center;
+    color: var(--warna-dasar2);
+    text-shadow: none;
+  }
+  .buttonPrev {
+    display: block;
+  }
+  .buttonNext {
+    display: block;
+  }
+}
+@media screen and (max-width: 885px) {
+  .header-nav-list {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 710px) {
+  .content-image {
+    height: 460px;
+  }
+  .header-nav-list-mobile {
+    display: flex;
+  }
+  .header-nav-list {
+    display: none;
+  }
+  .burgerNav {
+    z-index: 1000;
+  }
+  .tagImage-Jakarta > img,
+  .tagImage-budaya > img,
+  .tagImage-wisata > img,
+  .tagImage-makanan > img {
+    width: 400px;
+    height: 280px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .tagImage-Jakarta,
+  .tagImage-budaya,
+  .tagImage-wisata,
+  .tagImage-makanan {
+    height: 460px;
+  }
+
+  .text-singkat-budaya,
+  .text-singkat-wisata {
+    top: -380px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-sub-judul-web > h1 {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  .content-image {
+    top: -20px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .tagImage-Jakarta,
+  .tagImage-budaya,
+  .tagImage-wisata,
+  .tagImage-makanan {
+    height: 360px;
+  }
+  .tagImage-Jakarta > img,
+  .tagImage-budaya > img,
+  .tagImage-wisata > img,
+  .tagImage-makanan > img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+  }
+  .judul-teks-singkat-jakarta > h1 {
+    font-weight: bold;
+
+    font-size: 18px;
+  }
+  .judul-teks-singkat-budaya > h1,
+  .judul-teks-singkat-wisata > h1,
+  .judul-teks-singkat-makanan > h1 {
+    font-weight: 500;
+
+    font-size: 18px;
+  }
+  .text-singkat-budaya,
+  .text-singkat-wisata {
+    top: -290px;
+  }
+  .pesan-teks-singkat-jakarta > p,
+  .pesan-teks-singkat-budaya > p,
+  .pesan-teks-singkat-wisata > p,
+  .pesan-teks-singkat-makanan > p {
+    font-size: 12px;
+  }
+  .buttonPrev,
+  .buttonNext {
+    width: 30px;
+    top: 140px;
+  }
+  .buttonNext > img {
+    width: 25px;
+    height: 25px;
+  }
+  .buttonNext {
+    right: 0;
+  }
+  .buttonPrev > img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .content-image {
+    height: 290px;
+  }
+  .tagImage-Jakarta,
+  .tagImage-budaya,
+  .tagImage-wisata,
+  .tagImage-makanan {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tagImage-Jakarta > img,
+  .tagImage-budaya > img,
+  .tagImage-wisata > img,
+  .tagImage-makanan > img {
+    width: 240px;
+    height: 150px;
+    border-radius: 20px;
+  }
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../font/Poppins-Regular.ttf") format("truetype");
+}
+@keyframes animationSlidersLeft {
+  0% {
+    transform: translateX(-10000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes animationSlidersRight {
+  0% {
+    transform: translateX(10000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
